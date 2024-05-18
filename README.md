@@ -9,6 +9,8 @@
   I.e. should we always require at least one "POSITION" command?
 * (tests) Controller test should check that the correct parameters are passed to script runner (should probably inject
   script runner, so it can be mocked).
+* (tests) Controller tests should look for specific elements instead of substrings (jQuery-like, e.g. with Jsoup). Text
+  match is brittle.
 * (correctness) Warn on resetting position. The task wording implies that only initial position can be set directly.
 * (security) Limit script size and command count size.
 * (security, usability) Improve error handling (show meaningful error messages instead pf exceptions wherever possible).
