@@ -1,0 +1,22 @@
+.field {
+    margin: 1em;
+}
+
+.field-row {
+    display: block;
+    padding: 0.1em;
+}
+
+.field-cell {
+    vertical-align: text-bottom;
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    border: gray solid 1px;
+    align-content: center;
+    text-align: center;
+}
+
+.robot {
+    color: green;
+}
