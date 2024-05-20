@@ -21,8 +21,8 @@ FORWARD 2 //lets the robot do 2 steps forward
 </form>
 
 <div class="field" th:if="${robot}">
-    <div class="field-row" th:each="row : ${#numbers.sequence(0, 5)}">
-        <div class="field-cell" th:each="column : ${#numbers.sequence(0, 5)}">
+    <div class="field-row" th:each="row : ${#numbers.sequence(0, 4)}">
+        <div class="field-cell" th:each="column : ${#numbers.sequence(0, 4)}">
             <div class="robot" th:if="${row == robot.y && column == robot.x}"
                  th:switch="${robot.direction}">
                 <span th:case="${T(petrglad.idealo.Direction).EAST}">→</span>
