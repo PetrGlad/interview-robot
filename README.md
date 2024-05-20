@@ -1,14 +1,18 @@
 ## Robot script interpreter
 
+The interpreter is fully functional, however error and script special cases handling should be improver/clarified. In
+particular, if robot position is off grid, it is not displayed.
+
 To launch the server execute `./gradlew bootRun` then open http://127.0.0.1:8080.
 
 ## Questions, comments
 
 * (?) Are position coordinates row,col or col,row?
 * (?) Which direction is which? Australinas may disagree with you.
-* (?) It is not clear, nor specified how off-field positions should be handled if the server is aware of the displayed
-  field dimensions.  (stop the script? enlarge field?, shift field by showing origin coordinates?). If we automatically
-  enlarge field then coordinate values range should be limited to avoid displaying extremely large fields.
+* (?) It is not clear, nor specified how off-field positions should be handled even if the server is aware of the
+  displayed field dimensions (stop the script? enlarge field?, shift field by showing origin coordinates? show a
+  message?). If we choose to automatically enlarge field then coordinate values range should be limited to avoid
+  displaying extremely large fields.
 * (correctness) Should we reject scripts that left the robot status unknown (e.g. consisting of only "WAIT" commands)?
   I.e. should we always require at least one POSITION command? Current implementation returns an error in that case.
 * (correctness) Should we reject or warn on repeating POSITION commands? The task wording implies that only initial
